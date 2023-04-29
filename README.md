@@ -8,4 +8,7 @@ When the validate function returns an object where a key, e.g. `OPT`, is `undefi
 `yarn run start` and observe the log.
 
 ## Return type from `ConfigService<EnvironmentVariables, true>.get` excludes undefined
-The second generic parameter (`WasValidated`) changes the return value of `ConfigService.get`. If `true`, it removes `undefined` from the return type. If `false`, it adds `undefined`. The problem here is that a value could be both validated and `undefined`. Observe the TypeScript return type of `optValue` in `main.ts`. 
+The second generic parameter (`WasValidated`) changes the return value of `ConfigService.get`. If `true`, it removes `undefined` from the return type. If `false`, it adds `undefined`. The problem here is that a value could be both validated and `undefined`.
+
+### Reproduce
+Observe the TypeScript return type of `optValue` in `main.ts`.
